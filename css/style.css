@@ -92,17 +92,29 @@ img {
     grid-row: 2 / 7;
 }
 
-.controls {
+.options {
     outline: 2px dashed black;
     grid-row: 5 / 8;
 }
 
-.controls--sound {
+.options--sound {
     grid-column: 2 / 4;
     background-color: #4D9783;
 }
 
-.controls--equalizer {
+.options--equalizer {
     grid-column: 5 / 7;
     background-color: #3D3E42;
+}
+
+.controls {
+    grid-column: 2 / -4;
+    grid-row: 10;
+    background-color: #D5B005;
+}
+
+.exit {
+    grid-column: 12;
+    grid-row: 10;
+    background-color: orange;
 }

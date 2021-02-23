@@ -1,2 +1,2 @@
 # TEMPLATE
-<img src="cover.png">
+<img src="cover.jpg">

@@ -9,6 +9,15 @@ https://via.placeholder.com/150x100
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    text-transform: uppercase;
+}
+
+:root {
+    --gray: #374248;
+    --blue: #060D7F;
+    --lightBlue: #54B398;
+    --yellow: #D5B005;
+    --white: #FFFFFF;
 }
 
 .page {
@@ -20,7 +29,7 @@ https://via.placeholder.com/150x100
     min-height: 100%;
     font-size: 18px;
     font-family: Geometria, Arial, Helvetica, sans-serif;
-    background-color: #2c7580;
+    background-color: #000000;
     color: #ccc;
 }
 
@@ -60,24 +69,8 @@ img {
     /*height: 100%;*/
     width: 640px;
     height: 480px;
-    outline: 2px dashed gold;
-
-    text-transform: uppercase;
-
-}
-
-.wrapper::before {
-    content: "";
-    position: absolute;
-    top : 0;
-    left : 0;
-    width: inherit;
-    height: inherit;
-    background-image: url("../cover.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 102%;
-    opacity: 0;
+    outline: 6px ridge #cccccc;
+    background-image: linear-gradient(150deg, black, gray, gray, gray, black);
 }
 
 .time {
@@ -86,35 +79,111 @@ img {
     grid-row: 2 / 4;
 }
 
+/* =============================*/
+/* =========== TRACK ===========*/
+/* =============================*/
 .track {
-    background: blue;
     grid-column: 8 / -2;
     grid-row: 2 / 7;
 }
 
+.track__list {
+    display: grid;
+    gap: 1px;
+    height: 100%;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.track__item {
+
+}
+
+.track__item button {
+    border: 1px groove black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: 2px dashed red;
+    width: 100%;
+    height: 100%;
+}
+
+.track__item--no-listened {
+    background-color: var(--gray);
+}
+
+.track__item--add {
+    grid-column: -2;
+}
+
+/* =============================*/
+/* =========== options =========*/
+/* =============================*/
+
 .options {
-    outline: 2px dashed black;
     grid-row: 5 / 8;
+}
+
+.options__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.options__item {
+    height: 20px;
+    font-weight: bold;
+    color: var(--white);
+    text-shadow: 1px 1px 1px black;
+    background-image: linear-gradient(#ccc, var(--gray));
+}
+
+.options__item button {
+    width: 100%;
 }
 
 .options--sound {
     grid-column: 2 / 4;
-    background-color: #4D9783;
+    background-color: var(--lightBlue);
 }
 
 .options--equalizer {
     grid-column: 5 / 7;
-    background-color: #3D3E42;
+    background-color: var(--gray);
 }
 
+/* =============================*/
+/* =========== controls ========*/
+/* =============================*/
 .controls {
     grid-column: 2 / -4;
     grid-row: 10;
-    background-color: #D5B005;
+    background-color: var(--yellow);
 }
 
+.controls__list {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.controls__item {
+    flex-grow: 1;
+    height: 60%;
+    font-weight: bold;
+    background-image: linear-gradient(#ccc, var(--gray));
+    border: 2px groove white;
+}
+
+
+/* =============================*/
+/* =========== exit ============*/
+/* =============================*/
 .exit {
     grid-column: 12;
     grid-row: 10;
-    background-color: orange;
+    background-color: var(--blue);
+    color: var(--white);
 }

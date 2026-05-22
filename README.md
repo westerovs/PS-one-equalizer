@@ -1,2 +1,3 @@
 # TEMPLATE
-<img src="cover.jpg">
+https://westerovs.github.io/PS-one-equalizer/
+
